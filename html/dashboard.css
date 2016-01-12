@@ -498,8 +498,6 @@ margin-right: 0px; }
 .modal-title .btn:hover { background-color:#ced2d7; }
 .modal .btn.add:hover { background-color:#51595f; }
 
-.modal-body .btn {
-	margin-right: }
 
 @media (min-width: 768px) {
   .sidebar {
