@@ -68,16 +68,16 @@
 			$("#tree").modal('show');
 			});
 
-		$("ul.drag").sortable({
-        helper: 'clone'});
+	$("ul.drag").sortable({
+         helper: 'clone'});
 		
-		$('[data-toggle="popover"]').popover();
+	$('[data-toggle="popover"]').popover();
 		
-		$('[data-toggle="message-pop"]').hover(function(e) {
+	$('[data-toggle="message-pop"]').hover(function(e) {
             $('.message-pop').toggle();
         });
 		
-		$('.message-pop').hover(function(){}, function(e) {
+	$('.message-pop').hover(function(){}, function(e) {
             $('.message-pop').toggle();
         })
 		
@@ -88,14 +88,14 @@
 			
 			if(chk == 'check_box_outline_blank'){
 				$("#"+table).find( ".chk" ).html( "check_box" );
-				$("#"+table).find( ".chk" ).addClass( "chked" );
+				$("#"+table).find( ".chk" ).parent().addClass( "chked" );
 				$("#"+table).find( ".chk" ).parent().find( "input" ).prop('checked', true);
 				$("#"+table).find( ".chkall" ).parent().find( "input" ).prop('checked', true);
 				$(this).html( "check_box" );
 				$(this).addClass( "chked" );
 			} else {
 				$("#"+table).find( ".chk" ).html( "check_box_outline_blank" );
-				$("#"+table).find( ".chk" ).removeClass( "chked" ); 
+				$("#"+table).find( ".chk" ).parent().removeClass( "chked" ); 
 				$("#"+table).find( ".chk" ).parent().find( "input" ).prop('checked', false);
 				$("#"+table).find( ".chkall" ).parent().find( "input" ).prop('checked', false);
 				$(this).html( "check_box_outline_blank" );
@@ -115,14 +115,12 @@
 				$(this).parent().addClass( "chked" ); 
 				$(this).html('check_box'); 
 				td.addClass( "kk" );
-				td.find( "input" ).prop('checked', true);
 				
 				} 
 				else { 
-				$(this).removeClass( "chked" ); 
+				$(this).parent().removeClass( "chked" ); 
 				$(this).html('check_box_outline_blank'); 
-				td.removeClass( "kk" );
-				td.find( "input" ).prop('checked', false); }
+				td.removeClass( "kk" ); }
 		
 		})
 
@@ -147,12 +145,12 @@
 				"targets": 0
 			} ],
 			"order": [[ 1, 'asc' ]]});
-		
+		/*
 		$('#dtable td').dblclick(function(){ 
 		
 		htm = $(this).text();
 		new_htm = '<input id="editor" value="'+htm+'">';
 		$(this).html(new_htm);
-		$(this).find( "input" ).focus(); })
+		$(this).find( "input" ).focus(); })*/
 
 });
