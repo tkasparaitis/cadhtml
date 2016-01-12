@@ -1,0 +1,3 @@
+[{"id":"1","class":"nav nav-sidebar","text":"Level 1","children":[{"id":"2","text":"Basic Wall","children":[{"id":"4","text":"50"},{"id":"5","text":"115"},{"id":"3","text":"175"}]}]},
+{"id":"1a","class":"nav nav-sidebar","text":"Level 2","children":[{"id":"2a","text":"Child node 1"},{"id":"3a","text":"Child node 2"}]},
+{"id":"1b","class":"nav nav-sidebar","text":"Level 3","children":[{"id":"2b","text":"Child node 1"},{"id":"3b","text":"Child node 2"}]}]
