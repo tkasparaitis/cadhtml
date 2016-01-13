@@ -13,7 +13,6 @@ body {
 
 table.dataTable thead .sorting {
     background-image: url("img/sort.png") !important;
-    background-position: 10px !important;
 }
 table.dataTable thead .sorting_asc {
     background-image: url("img/sort_asc.png") !important;
@@ -35,6 +34,7 @@ table.dataTable thead .sorting_desc {
 	margin-right: 7px; }
 
 .chked { color:#007cb9; } /* #007CB9 */
+.chked a { color:#007cb9; } /* #007CB9 */
 
 table.dataTable.no-footer { border:none !important; }
 
@@ -168,7 +168,7 @@ table.dataTable.no-footer { border:none !important; }
     margin-right: 12px;
 }
 
-.popover { font-size:13px; }
+.popover { font-size:13px; display:none; }
 
 body.dragging, body.dragging * {
     cursor: move !important;
@@ -280,7 +280,8 @@ ul.drag li.placeholder:before {
     padding-top: 2px;
 	margin-right:8px;
 	/*letter-spacing:-0.1px;*/ }
-.navbar-header .btn:hover { border:“px solid #000 !important;}
+.navbar-header .btn:hover { border:0px solid #000 !important; }
+.navbar-header .btn { border:0px solid #000 !important; }
 .navbar-header .btn img { 
 	margin-left:0px; margin-right: 0px; }
 
@@ -361,7 +362,7 @@ td.bl { border:2px solid #0BA1D6 !important;}
 
 }
 
-td input[type="checkbox"], th input[type="checkbox"] { display:none;}
+td input[type="checkbox"], th input[type="checkbox"], li input[type="checkbox"]  { display:none;}
 
 #menu-ajax {
     margin-left: 10px;
@@ -369,10 +370,11 @@ td input[type="checkbox"], th input[type="checkbox"] { display:none;}
 }
 
 .jstree-default .jstree-anchor {
+    color: #2d4859 !important;
     margin-left: -5px; }
 
-.jstree-anchor:hover { background:none !important; border:none;
-    box-shadow: none !important; color:#000; }
+.jstree-default .jstree-anchor:hover { background:none !important; border:none;
+    box-shadow: none !important; color:#000 !important; }
 
 .jstree-default .jstree-clicked {
     background: none !important;
@@ -482,6 +484,10 @@ margin-right: 0px; }
 #dtable th .icon-font { position:relative; top:3px;}
 #dtable tr.kk td { background-color:#f5f5f5 !important; }
 
+#dtable th.sml {
+    width: 20px !important;
+}
+
 .modal-title .icon-font { 
 	position:relative; 
 	top:3px;
@@ -498,6 +504,7 @@ margin-right: 0px; }
 .modal-title .btn:hover { background-color:#ced2d7; }
 .modal .btn.add:hover { background-color:#51595f; }
 
+#syssel .modal-title .btn-primary { margin-left:25px; }
 
 @media (min-width: 768px) {
   .sidebar {

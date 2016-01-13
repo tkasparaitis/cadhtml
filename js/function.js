@@ -71,7 +71,7 @@
 	$("ul.drag").sortable({
          helper: 'clone'});
 		
-	$('[data-toggle="popover"]').popover();
+	$('[data-toggle="popover"]').popover({ 'placement': 'bottom'});
 		
 	$('[data-toggle="message-pop"]').hover(function(e) {
             $('.message-pop').toggle();
@@ -93,6 +93,14 @@
 				$("#"+table).find( ".chkall" ).parent().find( "input" ).prop('checked', true);
 				$(this).html( "check_box" );
 				$(this).addClass( "chked" );
+				
+				if ($("#"+table).find( ".chk" ).hasClass("lineColor")) {
+					$("#"+table).find( ".chk" ).parent().parent().addClass( "chked" );
+				    }
+				
+				if ($("#"+table).find( ".chk" ).hasClass("rowColor")) {
+					$("#"+table).find( ".chk" ).parent().parent().parent().addClass( "chked" );
+				    }
 			} else {
 				$("#"+table).find( ".chk" ).html( "check_box_outline_blank" );
 				$("#"+table).find( ".chk" ).parent().removeClass( "chked" ); 
@@ -100,6 +108,10 @@
 				$("#"+table).find( ".chkall" ).parent().find( "input" ).prop('checked', false);
 				$(this).html( "check_box_outline_blank" );
 				$(this).removeClass( "chked" ); 
+				
+				if ($("#"+table).find( ".chk" ).hasClass("rowColor")) {
+					$("#"+table).find( ".chk" ).parent().parent().parent().removeClass( "chked" );
+				    }
 			}
 			
 		})
@@ -115,12 +127,31 @@
 				$(this).parent().addClass( "chked" ); 
 				$(this).html('check_box'); 
 				td.addClass( "kk" );
+				if ($(this).hasClass("lineColor")) {
+					tr.addClass( "chked" );
+				    }
+
+				if ($(this).hasClass("rowColor")) {
+					tr.parent().addClass( "chked" );
+				    }
+
+
+
+
 				
 				} 
 				else { 
 				$(this).parent().removeClass( "chked" ); 
 				$(this).html('check_box_outline_blank'); 
-				td.removeClass( "kk" ); }
+				td.removeClass( "kk" );
+				if ($(this).hasClass("lineColor")) {
+					tr.removeClass( "chked" );
+				    }
+
+				if ($(this).hasClass("rowColor")) {
+					tr.parent().removeClass( "chked" );
+				    }
+				 }
 		
 		})
 
