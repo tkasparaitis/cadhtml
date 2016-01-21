@@ -77,9 +77,9 @@
             $('.message-pop').toggle();
         });
 		
-	$('.message-pop').hover(function(){}, function(e) {
-            $('.message-pop').toggle();
-        })
+	/*$('.message-pop').mouseleave(function(){}, function(e) {
+            $('.message-pop').hidde();
+        })*/
 		
 		$(".chkall").click(function (){
 			
@@ -158,7 +158,7 @@
 
 /* Data Tables*/
 
-        $('#dtable').DataTable({bFilter: false, bInfo: false, "bPaginate": true, "columnDefs": [ {
+        $('#dtable').DataTable({bFilter: false, "scrollX": true, bInfo: false, "bPaginate": true, "columnDefs": [ {
             "searchable": false,
             "orderable": false,
             "sWidth": "2%",

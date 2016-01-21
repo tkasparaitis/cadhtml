@@ -61,7 +61,8 @@ table.dataTable.no-footer { border:none !important; }
 
 #menu { border-right:2px #e6e6e6 solid;
 		width:270px;
-		height: 100% !important;
+		/*height: 100% !important;*/
+		overflow-x:auto;
 		padding-left:19px;}
 
 #content { height: 100% !important;
@@ -101,7 +102,7 @@ table.dataTable.no-footer { border:none !important; }
 .paginate_button { margin-right:5px; }
 .modal .btn:hover, .paginate_button:hover { background-color: #ced2d7; }
 .modal .btn.add { background-color: #5a636a; color: #fff; }
-.modal .btn.save { background-color: #0ba1d6; color: #fff;line-height: 15px;
+.modal .btn.save { background-color: #2493bf; color: #fff;line-height: 15px;
 	padding: 7px 15px;
 	margin-left: 14px; }
 .modal .btn.save:hover { background-color:#376bd6; }
@@ -435,7 +436,7 @@ td input[type="checkbox"], th input[type="checkbox"], li input[type="checkbox"] 
 #parameters .crt { padding-left: 15px; padding-right: 0px; }
 #parameters .crt span { color:#000; margin-left: 12px; }
 #parameters .add { line-height:10px; margin-left:8px; }
-#parameters .gr { padding-left: 6px; }
+#parameters .gr { padding-left: 12px; }
 #parameters .crt span { color:#000; margin-left: 12px; }
 #parameters .close { margin-top: 8px; }
 #parameters .modal-header {
@@ -468,7 +469,7 @@ margin-right: 0px; }
 
 #dtable_paginate { margin-bottom:10px; margin-top:10px; }
 
-#dtable th { font-size:13px; padding-left:22px;}
+#dtable th { font-size:13px; padding-left:22px; vertical-align: middle !important; }
 #dtable th.cen { text-align:center; width:48px; }
 #dtable th.cen span { padding-left:7px; }
 #dtable td { 
