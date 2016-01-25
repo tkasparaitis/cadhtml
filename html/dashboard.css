@@ -16,12 +16,12 @@ table.dataTable thead .sorting {
 }
 table.dataTable thead .sorting_asc {
     background-image: url("img/sort_asc.png") !important;
-    background-position: 10px !important;
+    /*background-position: 10px !important;*/
 	text-align:left;
 }
 table.dataTable thead .sorting_desc {
     background-image: url("img/sort_desc.png") !important;
-    background-position: 10px !important;
+    /*background-position: 10px !important;*/
 }
 
 .sorting_disabled { padding-left:10px !important;}
@@ -62,7 +62,6 @@ table.dataTable.no-footer { border:none !important; }
 #menu { border-right:2px #e6e6e6 solid;
 		width:270px;
 		/*height: 100% !important;*/
-		overflow-x:auto;
 		padding-left:19px;}
 
 #content { height: 100% !important;
@@ -366,8 +365,11 @@ td.bl { border:2px solid #0BA1D6 !important;}
 td input[type="checkbox"], th input[type="checkbox"], li input[type="checkbox"]  { display:none;}
 
 #menu-ajax {
-    margin-left: 10px;
+	padding-left: 30px;
+	margin-left:-20px;
+	margin-right:-20px;
 	margin-bottom:50px;
+	overflow-x:auto;
 }
 
 .jstree-default .jstree-anchor {
