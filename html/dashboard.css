@@ -480,6 +480,10 @@ margin-right: 0px; }
     text-align: center;}
 	
 #dtable td.lf, #dtable th.lf { text-align:left; }
+
+#dtable td.bl { 
+    padding: 9px 8px;}
+
 #dtable td.rg, #dtable th.rg { text-align:right; }
 	
 #dtable td input { text-align:center; border:none; background:none;}
